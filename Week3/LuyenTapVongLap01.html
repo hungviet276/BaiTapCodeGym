@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap vong lap 01</title>
+</head>
+<body>
+<!--<h3>Bai Tap 01</h3>-->
+<!--        <script>-->
+<!--            let i;-->
+<!--            for (i = 1 ; i<= 100;  i++) {-->
+<!--                if (i = 99){alert("Da hoan thanh");}-->
+<!--            }-->
+<!--        </script>-->
+<!--<h3>Bai Tap 2</h3>-->
+<!--        <script>-->
+<!--            let a =Number(prompt('Nhap nhiet do'));-->
+<!--           if (a>100){-->
+<!--               alert('Ha Nhiet Do');-->
+<!--           }else if (a<20) {-->
+<!--               alert("tang nhiet do");-->
+<!--           }-->
+<!--        </script>-->
+<!--<h3>Bai Tap 03</h3>-->
+<!--        <script>-->
+<!--            let n; let m; let x;-->
+<!--            let count = 0;-->
+<!--            for (n = 1, m=0;count <=20;){-->
+<!--                document.write(n +"<br>"); count++;-->
+<!--                x=n;  n= n+m;  m=x;-->
+<!--            }-->
+<!--        </script>-->
+<!--<h3>Bai Tap 04</h3>-->
+<!--        <script>-->
+<!--            let n; let m; let x;-->
+<!--            let count = 0;-->
+<!--            for (n =1,m=0;n%5!==0;){-->
+<!--                x=n; n=n+m; m=x;-->
+<!--            } alert(n)-->
+<!--        </script>-->
+
+<!--<h3>Bai tap 5</h3>-->
+<!--<script>-->
+<!--        let n; let m; let x; let sum=0;-->
+<!--        let count = 0;-->
+<!--         for (n = 1, m=0;count <=19;){-->
+<!--          sum+= n; count++;-->
+<!--              x=n;  n= n+m;  m=x;-->
+<!--            } document.write(sum);-->
+<!--</script>-->
+
+<!--<h3>Bai tap 6</h3>-->
+<!--        <script>-->
+<!--            let n; let sum =0; let count =0;-->
+<!--            for (n =1;count<=30;n++) {-->
+<!--                if (n%7==0){sum+=n; count++;}-->
+<!--            } document.write(sum);-->
+<!--        </script>-->
+
+<!--<h3>Bair tap 7</h3>-->
+<!--        <script>-->
+<!--            let n; let m  ="";-->
+<!--            for (n=1; n<=100; n++) {-->
+<!--                if (n%3==0 && n%5==0){m+= "fizz buzz" +"<br>"; }-->
+<!--                    else if (n%3==0) {m+= "fizz" + "<br>";}-->
+<!--                        else if (n%5 ==0) {m+= "buzz" + "<br>";}-->
+<!--                            else m+= n +"<br>";-->
+<!--            }   document.write(m);-->
+<!--        </script>-->
+
+<h3>Bai tap 8</h3>
+            <form>
+                <button type="button" id="demo" onclick="play()"  >Chơi</button>
+            </form>
+        <script>
+            function play() {
+                let a; let b; let n;let x;
+                a= Number(prompt('Nhập vào khoản muốn đoán từ:'));
+                b= Number(prompt("Nhập vào khoảng muốn đoán đến:"));
+                let random = parseInt(Math.random()*(b-a) +a);
+                for (n=1;n<=3;n++){
+                    x = Number(prompt('Số bạn đoán là'));
+                    if (x===random){alert("Chúc mừng bạn"); break;}
+                        else if (x < random) {alert("Số bạn nhập vào nhỏ hơn số cần tìm");}
+                            else {alert("Số bạn nhập vào lớn hơn số cần tìm");}
+                }
+
+            }
+
+        </script>
+
+
+</body>
+</html>
