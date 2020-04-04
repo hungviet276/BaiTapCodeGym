@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThaoTacVoiMang</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="input" id="input"> <button type="button" id="add" value="add" onclick="them()">Add</button>
+        <button type="button" id="display" value="display" onclick="hien()">Display</button> <br>
+        <h4 id="demo"></h4>
+    </form>
+        <script>
+            let array = Array(); let x =0;
+            function them(){
+            array[x] = document.getElementById('input').value;
+            alert("Element: " + array[x] + " added at index " + x);
+            x++;
+            document.getElementById('input').value = "";
+            }
+            function hien() {
+                let i; let e = "<hr>";
+                for (i = 0; i < array.length; i++) {
+                    e+= "Element " + array[i] +"<br>";
+
+                } document.getElementById('demo').innerHTML = e;
+
+            }
+        </script>
+</body>
+</html>
