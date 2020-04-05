@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Dien</title>
+</head>
+<body>
+        <form>
+            <input type="text" id="key" width="100"><button type="button" value="check" onclick="search()">Tra Cuu</button>
+            <p id="demo"></p>
+        </form>
+            <SCRIPT>
+                let eng = ["hello","byebye","school","car","bike","moto"];
+                let vie = ["xin chào","tạm biệt","trường học","ô tô","xe đạp","xe máy"];
+                let b;
+                function search() {
+                    let text = document.getElementById('key').value;
+
+                        if (eng.indexOf(text) !== -1) {
+                            b= eng.indexOf(text);
+                            document.getElementById('demo').innerHTML= vie[b];
+
+                        } else document.getElementById('demo').innerHTML= "Khong tra duoc";
+
+
+
+                }
+            </SCRIPT>
+
+</body>
+</html>
