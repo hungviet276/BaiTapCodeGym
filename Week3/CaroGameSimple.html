@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caro Game Simple</title>
+</head>
+<body>
+    <p id="demo"></p>
+         <script>
+            let board =[]; let c =document.getElementById('demo');
+            let data ="";
+            let i; let j;
+            for (i= 0 ; i<5; i++ ){
+                board[i] = new Array(0,0,0,0,0);
+            }
+            for (i= 0; i<5; i++) {
+                data+= "<br>";
+                for (j=0 ; j<5; j++) {
+                    data+= board[i][j] + "&ensp;";
+                }
+            } data+= "<br>" + "<button type='button' onclick='thaydoi()'>Change Value</button>";
+             c.innerHTML = data;
+
+             function thaydoi() {
+                 let a = Number(prompt('Nhap vi tri x'));
+                 let b = Number(prompt('Nhap vi tri y'));
+                 board[a][b] = "x";
+                 let data ="";
+                 for (i= 0; i<5; i++) {
+                     data+= "<br>";
+                     for (j=0 ; j<5; j++) {
+                         data+= board[i][j] + "&ensp;";
+                     }
+                 } data+= "<br>" + "<button type='button' onclick='thaydoi()'>Change Value</button>";
+                 c.innerHTML = data;
+
+
+             }
+         </script>
+</body>
+</html>
