@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su Dung Ham Cua Mang</title>
+</head>
+<body>
+<!--<h3>Bai tap 1</h3>-->
+<!--    <script>-->
+<!--        let color = ["black","red","white","pink"];-->
+<!--        document.write(color.toString());-->
+<!--    </script>-->
+
+<!--<h3>Bai tap 2</h3>-->
+<!--    <script>-->
+<!--        let num = prompt("Nhap vao day so");-->
+<!--        let str = num.toString();-->
+<!--        let result = [str[0]];-->
+<!--        for (let x =1; x < str.length; x++) {-->
+<!--            if (str[x-1]%2===0 && str[x]%2===0) {-->
+<!--                result.push("+",str[x]);-->
+<!--            } else result.push(str[x]);-->
+<!--        } alert(result.join(''));-->
+<!--    </script>-->
+
+<h3> bai tap 3</h3>
+        <script>
+            let str = prompt("Nhap vao day");
+            let result =[];
+            let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+            for (let x =0; x< str.length; x++) {
+                if (UPPER.indexOf(str[x])!== -1) {
+                    result.push(str[x].toLowerCase());
+                } else if (LOWER.indexOf(str[x]) !== -1) {
+                    result.push(str[x].toUpperCase());
+                } else result.push(str[x]);
+            } document.write(result.join(''));
+        </script>
+
+</body>
+</html>
