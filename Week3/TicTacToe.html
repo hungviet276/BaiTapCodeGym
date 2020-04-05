@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+    let board =[]; let c =document.getElementById('demo');
+    let data ="";
+    let i; let j;
+    for (i= 0 ; i<5; i++ ){
+        board[i] = new Array(" . "," . "," . "," . "," . ");
+    }
+    for (i= 0; i<5; i++) {
+        data+= "<br>";
+        for (j=0 ; j<5; j++) {
+            data+= board[i][j] + "&ensp;";
+        }
+    } data+= "<br>" + "<button type='button' onclick='thaydoi()'>Change Value</button>";
+    c.innerHTML = data;
+
+    function thaydoi() {
+        let a = Number(prompt('Nhap vi tri x'));
+        let b = Number(prompt('Nhap vi tri y'));
+        board[a][b] = "x";
+        let data ="";
+        for (i= 0; i<5; i++) {
+            data+= "<br>";
+            for (j=0 ; j<5; j++) {
+                data+= board[i][j] + "&ensp;";
+            }
+        } data+= "<br>" + "<button type='button' onclick='thaydoi1()'>Change Value</button>";
+        c.innerHTML = data;
+        for (i =0;i<5; i++) {
+            for (j =0;j<5; j++) {
+                if (board[i][j] == "x" && board[i][j+1] == "x" && board[i][j+2] == "x" ) {
+                    alert("You Win");
+                } else if (board[i][j] == "x" && board[i+1][j]=="x" && board[i+2][j]=="x") {alert("You Win");}
+                    else if (board[i][j] == "x" && board[i+1][j+1]== "x" && board[i+2][j+2]=="x") {alert("You Win");}
+                        else if (board[i][j] == "x" && board[i-1][j+1]=="x" && board[i-2][j+2]){alert("You Win");}
+
+                    }
+                }
+            }
+
+    function thaydoi1() {
+        let a = Number(prompt('Nhap vi tri x'));
+        let b = Number(prompt('Nhap vi tri y'));
+        board[a][b] = "o";
+        let data ="";
+        for (i= 0; i<5; i++) {
+            data+= "<br>";
+            for (j=0 ; j<5; j++) {
+                data+= board[i][j] + "&ensp;";
+            }
+        } data+= "<br>" + "<button type='button' onclick='thaydoi()'>Change Value</button>";
+        c.innerHTML = data;
+        for (i =0;i<5; i++) {
+            for (j =0;j<5; j++) {
+                if (board[i][j] == "o" && board[i][j+1] == "o" && board[i][j+2] == "o" ) {
+                    alert("You Win");
+                } else if (board[i][j] == "o" && board[i+1][j]=="o" && board[i+2][j]=="o") {alert("You Win");}
+                else if (board[i][j] == "o" && board[i+1][j+1]== "o" && board[i+2][j+2]=="o") {alert("You Win");}
+                else if (board[i][j] == "o" && board[i-1][j+1]=="o" && board[i-2][j+2]){alert("You Win");}
+
+            }
+        }
+    }
+</script>
+</body>
+</html>
