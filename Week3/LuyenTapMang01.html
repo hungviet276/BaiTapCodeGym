@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen Tap Mang 01</title>
+</head>
+<body>
+<!--<h3> Bai Tap 01</h3>-->
+<!--    <script>-->
+<!--        let a =[3,12,45,21,65,2,14,2,6,4,3,5,1,2,4,5,6,45,65,75]-->
+<!--        let count=0;-->
+<!--        for (let i =0; i< a.length; i++) {-->
+<!--            if (a[i]>= 10) { document.write(a[i] + "<br>"); count++;}-->
+<!--        } alert(count);-->
+
+<!--    </script>-->
+
+<!--<h3> Bai Tap 02</h3>-->
+<!--        <script>-->
+<!--            let a =[3,12,45,21,65,2,14,2,6,4,3,5,1,2,4,5,6,45,65,75]-->
+<!--            let max =0; let n;-->
+<!--            for (let i =0; i< a.length; i++) {-->
+<!--                if (a[i] - max >0) {max =a[i]; n =i;}-->
+<!--            } alert("max la " + max +" tai vi tri "+ n);-->
+<!--        </script>-->
+
+<!--<h3>Bai tap 03</h3>-->
+<!--<script>-->
+<!--    let a =[3,12,45,21,65,2,14,2,6,4,3,5,1,2,4,5,6,45,65,75]-->
+<!--    let max =0; let n; let tb =0; let sum =0;-->
+<!--    for (let i =0; i< a.length; i++) {-->
+<!--        sum+=a[i];-->
+<!--        if (a[i] - max >0) {max =a[i]; n =i;}-->
+<!--    } alert("max la " + max +" tai vi tri "+ n);-->
+<!--    tb = sum/a.length;-->
+<!--    alert("Trung binh la:" +tb);-->
+<!--    -->
+<!--</script>-->
+
+<!--<h3>Bai tap 04</h3>-->
+<!--        <form>-->
+<!--            <input type="number" id="songuyen"><button id="add" type="button" onclick="them();">Them vao mang</button>-->
+<!--            <button type="button" id="change" onclick="doinguoc();">Chuyen nguoc</button><br>-->
+<!--            <p id="demo"></p>-->
+<!--        </form>-->
+<!--        <script>-->
+<!--                let a = new Array(); let i =0; let j;let b;-->
+<!--                 function them() {-->
+<!--                     a[i] = document.getElementById('songuyen').value;-->
+<!--                     i++;-->
+<!--                     document.getElementById('songuyen').value ="";-->
+
+<!--    }-->
+<!--            function doinguoc() {-->
+<!--                    j = a.length -1;-->
+<!--                    for (i=0; i < a.length/2 ; i++) {-->
+<!--                        b= a[i]; a[i] =a[j]; a[j] =b; j&#45;&#45;;-->
+<!--                    }-->
+<!--                        document.getElementById('demo').innerHTML = a;-->
+<!--            -->
+<!--            }-->
+<!--        </script>-->
+
+<!--<h3> Bai tap 05 </h3>-->
+
+<!--    <script>-->
+<!--        let a =[3,12,45,-3,65,2,14,2,6,-5,3,5,-7,2,4,-4,6,45,65,75]-->
+<!--            let count =0;-->
+<!--        for (let i= 0; i< a.length; i++) {-->
+<!--            if (a[i] < 0){count++;}-->
+<!--        } alert(count);-->
+<!--    </script>-->
+
+<!--<h3>Bai tap 06</h3>-->
+<!--        <script>-->
+<!--            let a =[25,12,25,45,36,25,14,58,65,45,78,56,98,58,45,85,35,21]-->
+<!--            let n = Number(prompt("Nhap vao so N"));-->
+<!--            if (a.indexOf(n) != -1) { alert("N is in the array");}-->
+<!--            else alert("N is not in the array");-->
+<!--        </script>-->
+
+<!--<h3>Bai tap 07</h3>-->
+<!--    <script>-->
+<!--        let a =[25,12,25,45,36,25,14,58,65,45,78,56,98,58,45,85,35,21]-->
+<!--        let n = Number(prompt("Nhap vao so N")); let b;-->
+<!--        if (a.indexOf(n) != -1) {-->
+<!--            b = a.indexOf(n);-->
+<!--            a.splice(b,1);-->
+<!--        } document.write(a.length);-->
+<!--    </script>-->
+
+<h3>Bai tap 08</h3>
+<form>
+    <input type="number" id="songuyen"><button id="add" type="button" onclick="them();">Them vao mang</button>
+    <button type="button" id="change" onclick="sapxep();">Sắp xếp</button><br>
+    <p id="demo"></p>
+</form>
+<script>
+    let a = new Array(); let i=0; let j; let b = new Array();let n;let max;let f;
+    function them() {
+        a[i] = document.getElementById('songuyen').value;
+        i++;
+        document.getElementById('songuyen').value = "";
+        f= a.length;
+    }
+    function sapxep() {
+        max =0;
+      for (j=0;j<f ;j++) {  max =0;
+          for (i=0;i< a.length; i++) {
+            if (a[i] -max >0){max =a[i];n =i;}
+        } b[j] = max; a.splice(n,1);
+        } document.getElementById('demo').innerHTML = b;
+
+    }
+</script>
+
+
+
+
+
+</body>
+</html>
