@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea on Typing</title>
+</head>
+<body>
+<form name="hihi">
+    <h1>Type Anything slowly</h1>
+    <textarea name="hehe"  onkeydown="demo();" style="width: 500px;height: 100px;font-size: 25px"></textarea>
+</form>
+    <script>
+        let a = ["T","ô","i"," ","r","ấ","t"," ","đ","ẹ","p"," ","t","r","a","i"];
+        let n ="" ;
+
+        function demo() {
+            let t = document.hihi.hehe.value;
+            let j = t.length;
+            if(j > 0)
+            {
+                for(let i=0; i<j; i++)
+                {
+                    n = n + a[i];
+                    if(i == a.length)
+                    {
+                        document.hihi.hehe.value = "";
+                        n = "";
+                    }
+                }
+            }
+            document.hihi.hehe.value = n;
+            n="";
+            setTimeout("demo()", 1);
+
+        }
+
+    </script>
+</body>
+</html>
