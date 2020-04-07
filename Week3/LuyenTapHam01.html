@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap Ham 01</title>
+</head>
+<body>
+
+<!--<h3>Bai tap 01</h3>-->
+<!--    <script>-->
+<!--        function alertMessage() {-->
+<!--            alert("Xin chao");-->
+<!--        }-->
+<!--        window.onload = alertMessage();-->
+
+<!--    </script>-->
+
+<!--<h3>Bai tap 02</h3>-->
+<!--        <script>-->
+<!--            function upNum(n) {-->
+<!--                n++;-->
+<!--                return n;-->
+<!--            }-->
+<!--            let a = upNum(5);-->
+<!--            alert(a);-->
+<!--        </script>-->
+
+<!--<h3>Bai tap 03</h3>-->
+<!--        <script>-->
+<!--            function sumIf(num1,num2) {-->
+<!--                let sum;-->
+<!--                if (num1>num2) {alert("số thứ nhất lớn hơn số thứ hai");}-->
+<!--                else sum = num1+num2;-->
+<!--                return sum;-->
+<!--            }-->
+
+<!--            let a = sumIf(3,4);-->
+<!--            alert(a);-->
+<!--        </script>-->
+
+<!--<h3>Bai tap 04</h3>-->
+<!--    <script>-->
+<!--        function addNumbers() {-->
+<!--            firstNum = 4;-->
+<!--            secondNum = 8;-->
+<!--            result = firstNum + secondNum;-->
+<!--            return result;-->
+<!--        }-->
+<!--        result = 0;-->
+<!--        // alert(result);-->
+<!--        result = addNumbers();-->
+<!--        alert(result);-->
+<!--    </script>-->
+
+<h3>Bai tap 05</h3>
+        <script>
+            let array1 =["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe","Regulus"]
+            let array2 =[ "Ursa","Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+            function search(star) {
+                if (array1.indexOf(star) != -1){
+                    let a = array1.indexOf(star); result = array2[a];
+                } else {result = "khong tim thay";}
+                return result;
+            }
+            let name = prompt("Nhap vao ten ngoi sao");
+            let result1 = search(name);
+            alert(result1);
+
+        </script>
+
+</body>
+</html>
