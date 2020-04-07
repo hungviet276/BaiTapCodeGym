@@ -68,26 +68,26 @@
 <!--            }   document.write(m);-->
 <!--        </script>-->
 
-<h3>Bai tap 8</h3>
-            <form>
-                <button type="button" id="demo" onclick="play()"  >Chơi</button>
-            </form>
-        <script>
-            function play() {
-                let a; let b; let n;let x;
-                a= Number(prompt('Nhập vào khoản muốn đoán từ:'));
-                b= Number(prompt("Nhập vào khoảng muốn đoán đến:"));
-                let random = parseInt(Math.random()*(b-a) +a);
-                for (n=1;n<=3;n++){
-                    x = Number(prompt('Số bạn đoán là'));
-                    if (x===random){alert("Chúc mừng bạn"); break;}
-                        else if (x < random) {alert("Số bạn nhập vào nhỏ hơn số cần tìm");}
-                            else {alert("Số bạn nhập vào lớn hơn số cần tìm");}
-                }
+<!--<h3>Bai tap 8</h3>-->
+<!--            <form>-->
+<!--                <button type="button" id="demo" onclick="play()"  >Chơi</button>-->
+<!--            </form>-->
+<!--        <script>-->
+<!--            function play() {-->
+<!--                let a; let b; let n;let x;-->
+<!--                a= Number(prompt('Nhập vào khoản muốn đoán từ:'));-->
+<!--                b= Number(prompt("Nhập vào khoảng muốn đoán đến:"));-->
+<!--                let random = parseInt(Math.random()*(b-a) +a);-->
+<!--                for (n=1;n<=3;n++){-->
+<!--                    x = Number(prompt('Số bạn đoán là'));-->
+<!--                    if (x===random){alert("Chúc mừng bạn"); break;}-->
+<!--                        else if (x < random) {alert("Số bạn nhập vào nhỏ hơn số cần tìm");}-->
+<!--                            else {alert("Số bạn nhập vào lớn hơn số cần tìm");}-->
+<!--                }-->
 
-            }
+<!--            }-->
 
-        </script>
+<!--        </script>-->
 
 
 </body>
