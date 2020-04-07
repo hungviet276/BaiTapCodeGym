@@ -24,7 +24,8 @@
     function thaydoi() {
         let a = Number(prompt('Nhap vi tri x'));
         let b = Number(prompt('Nhap vi tri y'));
-        board[a][b] = "x";
+        if (board[a][b] != "o"){
+        board[a][b] = "x";} else alert("bao loi");
         let data ="";
         for (i= 0; i<5; i++) {
             data+= "<br>";
@@ -48,7 +49,8 @@
     function thaydoi1() {
         let a = Number(prompt('Nhap vi tri x'));
         let b = Number(prompt('Nhap vi tri y'));
-        board[a][b] = "o";
+        if (board[a][b] != "x"){
+        board[a][b] = "o";} else alert("bao loi");
         let data ="";
         for (i= 0; i<5; i++) {
             data+= "<br>";
