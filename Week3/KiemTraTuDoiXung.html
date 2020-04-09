@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KiemTraTuDoiXung</title>
+</head>
+<body>
+
+
+<script> let result;
+    let a =prompt("nhap vao tu");
+function isPalindrome(m) {
+    let n = m.split("");
+    for (let i=0; i<n.length;i++)
+        if (n[0]==n[n.length-1]){n.splice(0,1);n.splice(n.length-1,1);}
+    if (n.length<=1){result=true;}
+    else result= false;
+    return result;
+}
+    let result1 =isPalindrome(a);
+    if (result1==true){alert("là từ đối xứng");}
+    else alert("không là từ đối xứng");
+
+
+</script>
+</body>
+</html>
