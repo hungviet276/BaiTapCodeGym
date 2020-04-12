@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay Dung Lop Date</title>
+</head>
+<body>
+<script>
+    let Mydate = function(day,month,year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.getDay= function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+    }
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+        this.setDate = function (day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        this.toString = function () {
+            result = this.day +"/"+ this.month+ "/" + this.year;
+            return result;
+
+        }
+    }
+
+    let date = new Mydate(27,6,1993);
+    let day = date.getDay();
+    let month =date.getMonth();
+    let year = date.getYear();
+    // alert(day+"/"+ month +"/"+year);
+        date.setDay(10);
+        date.setMonth(10);
+        date.setYear(1990);
+    day = date.getDay();
+    month =date.getMonth();
+    year = date.getYear();
+
+    // alert(day+"/"+ month +"/"+year);
+    date.setDate(1,1,1993);
+    day = date.getDay();
+    month =date.getMonth();
+    year = date.getYear();
+    // alert(day+"/"+ month +"/"+year);
+    let string = date.toString();
+    alert(string);
+
+
+
+
+</script>
+</body>
+</html>
