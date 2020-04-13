@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý danh sach</title>
+    <style>
+        .addNew input[type=text] {
+            border-radius: 5px;
+            border-color: aqua;
+        }
+        .addNew input[type=button]{
+            width: 65px; height: 35px;
+            background-color: #4c88ff;
+            border-radius: 7px;
+
+        }
+        .div1 {background-color: azure;
+            height: 170px;width: 400px;
+            align-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .tableList {
+            border: 1px;
+            width: 900px;
+        }
+        .tableList tr:nth-child(odd){background-color: #f0f8ff;
+            alignment: left; height: 50px;
+        }
+        td button[type=button] { width: 65px; height: 35px;
+            background-color: #4c88ff;
+            border-radius: 7px; }
+
+    </style>
+</head>
+<body>
+<form><div class="div1">
+    <h2>Thêm Sinh Viên</h2>
+
+    <label class="addNew" for="inputStudent">
+        <input type="text" id="inputStudent" placeholder="Họ và tên" style="width: 300px;height: 30px">
+        <input type="text" id="inputAdd" placeholder="Địa chỉ"  style="width: 300px;height: 30px"> <br>
+        <input type="button" value="Add" onclick="addStudent()" style="color: azure" >
+    </label>
+    <h2>Hiển Thị Danh Sách Sinh Viên</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        let listStudent =[]; let i=0; let display =""; let j; let stt; let address = [];
+        function addStudent() {
+
+            if (document.getElementById('inputStudent').value=="" || document.getElementById('inputAdd').value==""){alert(" Lỗi nhập thông tin!");}
+            else {listStudent[i] =document.getElementById('inputStudent').value;
+                address[i] =document.getElementById('inputAdd').value;
+                 i++; displayList();}
+                document.getElementById('inputStudent').value ="";
+                 document.getElementById('inputAdd').value ="";
+        }
+        function displayList() {
+
+            display+="<table class='tableList'>";
+            display+="<th>STT</th><th>Tên Sinh Viên</th><th>Địa chỉ</th><th></th><th><span style='color: red'>"+listStudent.length+" Người </span></th>";
+            for (j=0; j <listStudent.length; j++){ stt= j +1;
+                display+="<tr><td class='list'width='50' align='center'>"+stt+"</td><td class='list'width='300' name='product' align='center'>" +listStudent[j]+ "</td><td class='list'width='300' name='product' align='center'>" +address[j]+ "</td>";
+                display+="<td class='list' align='center'>"+"<button type='button' value='"+j+"' onclick='editStudent(this.value)'><span style='color: aliceblue'>Edit</span></button> "+"</td>";
+                display+="<td class='list' align='center'>"+"<button type='button' value='"+j+"' onclick='delStudent(this.value)'><span style='color: aliceblue'>Delete</span></button> "+"</td>";
+                display+= "</tr>"
+            } display+="</table>";
+            document.getElementById('demo').innerHTML=display;
+            display="";
+        }
+
+        function editStudent(number) {
+            listStudent[number]= prompt('Sửa tên Sinh Viên: ');
+            address[number]= prompt('Sửa địa chỉ Sinh Viên: ');
+            displayList()
+        }
+
+        function delStudent(number) {
+            listStudent.splice(number,1);
+            address.splice(number,1);
+            displayList()
+            i--;
+        }
+
+
+    </script>
+</div>
+</form>
+</body>
+</html>
