@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Chuyen Nhiet Do</title>
 </head>
 <body>
-$END$
+<h2>Temperature Converter</h2>
+<h3>Type a value in the Fahrenheit field to convert the value to Celcius:</h3>
+   Fahrenheit <form><input type="text" id="input" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)"></form>
+<p>Celsius: <span id="result"></span></p>
+    <script>
+            function temperatureConverter(valNum) {
+                valNum = parseFloat(valNum);
+                document.getElementById('result').innerHTML = (valNum-32)/1.8;
+
+
+            }
+    </script>
 </body>
 </html>

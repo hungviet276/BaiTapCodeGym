@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368" height="768" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    let Circle = function (radius) {
+        this.radius = radius;
+        this.getArea = function () {
+            return Math.PI*radius*radius;
+        }
+        this.getPerimeter = function () {
+            return 2*Math.PI*radius;
+        }
+        this.drawCanvas = function () {
+            let circleCanvas = document.getElementById('myCanvas').getContext("2d");
+            circleCanvas.beginPath();
+            circleCanvas.arc(100,100,this.radius,0,2*Math.PI);
+            circleCanvas.fill();
+        }
+
+    }
+    let circle = new Circle(50);
+    console.log(circle.getArea());
+    console.log(circle.getPerimeter());
+    circle.drawCanvas();
+</script>
+</body>
+</html>
